@@ -16,7 +16,7 @@ huis2 = huis.merge(
     right_on = 'Postcode_spatie'
 )
 
-## gemiddkde prijs per provincie
+## gemiddelde prijs per provincie
 Prov = huis2.\
     groupby('province_code')['prijs'].\
     agg(['min', 'max', 'mean', 'median']).\

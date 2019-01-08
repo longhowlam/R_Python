@@ -18,10 +18,12 @@ huis2 = huis %>%
 Prov = huis2 %>%
     group_by(province_code) %>%
     summarise(
-        min  = min(prijs),
-        max  = max(prijs),
-        mean = mean(prijs)
-    ) %>%
-    arrange(mean)
+        minprice  = min(prijs, na.rm = TRUE),
+        maxprice  = max(prijs, na.rm = TRUE),
+        meanprice = mean(prijs, na.rm = TRUE)
+    ) 
+    
+    %>%
+    arrange(meanprice)
 
-Prov
+Prov %>% arrange(desc(meanprice))
