@@ -23,3 +23,9 @@ Prov = huis2.\
     sort_values(['mean'])
 
 Prov
+
+## filter data
+huis2.query(
+ 'province_code == "ZE" & \
+ prijs > 75000'
+)

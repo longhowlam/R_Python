@@ -25,3 +25,6 @@ Prov = huis2 %>%
     arrange(meanprice)
 
 Prov 
+
+## filter data
+huis2 %>% filter(province_code == 'ZE')
