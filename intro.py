@@ -1,16 +1,24 @@
-#introductie code python
+######################################## 
+##
+## introductie code python
 
-# data stypes and structures
+#### data stypes and structures
+
+## integer and doubles 
 
 x = 9
 
 x = 9.
 type(x)
 
-x =7
+x = 7
 y = 2
 x/y
 
+12 % 7
+12 // 7
+
+## strings 
 x = "longhow"
 type(x)
 
@@ -19,13 +27,16 @@ type(x)
 x.upper()
 x[3:6]
 
+## categorische data
 
 import pandas as pd
 
 s = pd.Series(["F","F","F","M", "M"], dtype="category")
 s
-########### ##############
 
+#### data structures
+
+## arrays (vectoren)
 import numpy as np
 x = np.array([1, 2, 3, 4, 5])
 x
@@ -40,7 +51,7 @@ x[0]
 x= (1,2,3,4,5)
 x[2] = 9
 
-##### matrices
+## matrices
 
 import numpy as np
 
@@ -59,12 +70,12 @@ A[1,:]
 A[ [1,2],:]
 
 
-######## lists
+## lists
 
 l1 = [1,2,3,4, "p", ["a", "b"]]
 l1
 
-######## dictionaries
+## dictionaries
 
 released = {
 		"iphone" : 2007,
@@ -85,7 +96,7 @@ test = {
 	
 
 
-######## data frames
+## pandas data frames
 import numpy as np
 import pandas as pd
 data = np.array([[ 5.8,2.8], [ "a", "b"]])
@@ -122,7 +133,7 @@ columns = ['id', 'color']
 df = pd.DataFrame(ex_dic, columns=columns)
 df
 
-12 % 7
+
 
 
 
