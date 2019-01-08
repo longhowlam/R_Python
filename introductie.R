@@ -21,9 +21,7 @@ Prov = huis2 %>%
         minprice  = min(prijs, na.rm = TRUE),
         maxprice  = max(prijs, na.rm = TRUE),
         meanprice = mean(prijs, na.rm = TRUE)
-    ) 
-    
-    %>%
+    ) %>%
     arrange(meanprice)
 
-Prov %>% arrange(desc(meanprice))
+Prov 

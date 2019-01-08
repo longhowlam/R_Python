@@ -117,25 +117,9 @@ df.dtypes
 
 ######################
 
-
-# create a dictionary
-ex_dic = {
-    'id': [100, 101, 102],
-    'color': ['red', 'blue', 'red']
-}
-
-# create a list of strings
-columns = ['id', 'color']
-
-# Passing a dictionary
-# key: column name
-# value: series of values
-df = pd.DataFrame(ex_dic, columns=columns)
+d = {'id': [1, 2,3], 'col': ['red', 'blue', 'red']}
+df = pd.DataFrame(data=d)
 df
-
-
-
-
 
 
 
