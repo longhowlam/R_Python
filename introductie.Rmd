@@ -2,11 +2,15 @@
 title: "introductie R"
 author: "Longhow Lam"
 date: "1/8/2019"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(plotly)
 ```
 
 ## R Markdown
@@ -24,7 +28,14 @@ summary(cars)
 You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+ggplot(cars, aes(x=speed, y=dist)) + geom_point()
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+plot_ly(cars, x = ~speed, y=~dist)
+```
+
+
+

@@ -4,3 +4,6 @@
 .Ruserdata
 .RData
 *.Rproj
+*.html
+*.pdf
+
