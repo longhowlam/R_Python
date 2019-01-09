@@ -8,10 +8,10 @@ huis = read_csv("huizen.csv")
 PC = read_csv("postcodes.csv")
 
 ## join on postcodes
-huis2 = huis %>% 
+huis2 = huis %>%
   left_join(
-    PC, 
-    by = c("PC6"="Postcode_spatie")
+    PC,
+    by = c("PC6" = "Postcode_spatie")
   )
 
 ## gemiddelde prijs per provincie
@@ -24,7 +24,7 @@ Prov = huis2 %>%
   ) %>%
   arrange(meanprice)
 
-Prov 
+Prov
 
 ## filter data
-huis2 %>% filter(province_code == 'ZE')
+huis2 %>% filter(province_code == "ZE")
