@@ -29,3 +29,6 @@ huis2.query(
  'province_code == "ZE" & \
  prijs > 75000'
 )
+
+## ook mogelijk
+huis2["province_code"].value_counts()
