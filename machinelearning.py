@@ -74,3 +74,9 @@ outlm.coef_
 # bereken predictions en r kwadraat 
 y_pred = outlm.predict(X)
 r2_score(y,y_pred)  
+
+
+##################################################################################
+##
+## classification model
+

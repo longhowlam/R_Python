@@ -28,3 +28,33 @@ outlm = lm(prijs ~ kamers + Oppervlakte + province_code, data = huis2)
 
 ## province DR is als reference weggelaten
 summary(outlm)
+
+
+########################################################################################
+##
+## classification model
+
+library(rpart)
+
+# titanic passenger data
+titanic = readr::read_csv("titanic.csv")
+
+## decsion tree
+tree.out = rpart(
+  Survived ~ Sex + Age + Pclass, 
+  data = titanic
+)
+
+plot(tree.out)
+text(tree.out, use.n = TRUE)
+
+library(rattle)
+fancyRpartPlot(tree.out)
+
+### larger trees with complexity parameter
+tree.outComplex = rpart(
+  Survived ~ Sex + Age + Pclass,
+  data = titanic,
+  control = list(cp=0.005)
+)
+fancyRpartPlot(tree.outComplex)
