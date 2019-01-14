@@ -18,8 +18,6 @@ huis2 = huis.merge(
     right_on = 'Postcode_spatie'
 ).query('prijs > 50000 & prijs < 2000000')
 
-
-
 ## packages
 from sklearn.model_selection import cross_val_predict
 from sklearn import linear_model

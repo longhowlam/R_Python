@@ -30,6 +30,25 @@ outlm = lm(prijs ~ kamers + Oppervlakte + province_code, data = huis2)
 summary(outlm)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ########################################################################################
 ##
 ## classification model
