@@ -140,3 +140,5 @@ df.id
 df.col[2]
 
 df[['col', 'leeftijd']]
+
+df['temp'] = df['leeftijd'] * 12

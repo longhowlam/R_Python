@@ -32,3 +32,17 @@ huis2.query(
 
 ## ook mogelijk
 huis2["province_code"].value_counts()
+
+######  Amsterdam column ###############################
+
+huis2["city"].str.lower()
+
+huis2["city"].str.find("Amsterdam")
+
+huis2['Amsterdam'] = np.where(
+    huis2["city"].str.find("Amsterdam") < 0,
+    'no',
+    'yes'  
+)
+
+huis2["Amsterdam"].value_counts()

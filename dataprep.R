@@ -28,3 +28,16 @@ Prov
 
 ## filter data
 huis2 %>% filter(province_code == "ZE")
+
+######  Amsterdam Column ###############################
+
+library(stringr)
+
+huis2 = huis2 %>% mutate(
+  Amsterdam = str_detect(city, "Amsterdam")
+)
+
+options(dplyr.width = Inf)
+head(huis2)
+
+glimpse(huis2)

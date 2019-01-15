@@ -100,3 +100,5 @@ names(df)
 df$id
 df$col[2]
 df[c("col", "leeftijd")]
+
+df$temp = df$leeftijd * 12
