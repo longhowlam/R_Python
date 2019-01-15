@@ -135,6 +135,7 @@ df
 
 # kolommen in df
 df.dtypes
+df.columns
 
 df.id
 df.col[2]
