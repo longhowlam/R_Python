@@ -28,10 +28,32 @@ outlm = lm(prijs ~ kamers + Oppervlakte + province_code, data = huis2)
 
 ## province DR is als reference weggelaten
 summary(outlm)
+# Wat betekend dit voor bijvoorbeeld province NH met parameter 178679.24
+# Het betekend dat de huizenprijs gemiddeld 178679.24 hoge rligt dan DR
+
+######### sum contrast
+outlm = lm(
+  prijs ~ kamers + Oppervlakte + province_code,
+  data = huis2,
+  contrasts = list(province_code = "contr.sum")
+)
+summary(outlm)
+
+# nu kan je de paramters interpreteren als verschillen van het totale gemiddelde
 
 
+#######  Amsterdam effect
 
+huis2 = huis2 %>% mutate(
+  Amsterdam = str_detect(city, "Amsterdam")
+)
 
+outlm = lm(
+  prijs ~ kamers + Oppervlakte + province_code + Amsterdam, 
+  data = huis2
+)
+
+summary(outlm)
 
 
 

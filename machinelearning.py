@@ -69,9 +69,26 @@ outlm = lr.fit(X,y)
 outlm.intercept_
 outlm.coef_
 
+## Python is wat 'kaal' in de output, plak zelf de namen er bij
+cdf = pd.DataFrame(outlm.coef_, X.columns, columns=['Coefficients'])
+print(cdf)
+
 # bereken predictions en r kwadraat 
 y_pred = outlm.predict(X)
 r2_score(y,y_pred)  
+
+## wat zou er gebeuren als je DR niet zou weglaten
+huis3 = huis2.dropna(subset= ['kamers', 'Oppervlakte', 'prijs', 'province_code'])
+feature_cols = ['kamers', 'Oppervlakte' , 'province_code']
+X = huis3.loc[:, feature_cols]
+y = huis3.prijs
+
+## maak dummies en fit
+X = pd.get_dummies(X, columns=["province_code"])
+outlm = lr.fit(X,y)
+
+## het blijkt dat we de zogenaamde sum contrast in R hebben.
+
 
 
 ##################################################################################
@@ -165,13 +182,3 @@ import matplotlib.pyplot as plt
 import scikitplot as skplt
 skplt.metrics.plot_roc(titanic.Survived, pred_scores)
 plt.show()
-
-
-
-
-
-
-
-
-
-
