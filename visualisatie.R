@@ -26,3 +26,17 @@ huis %>%
     summarise(n = n()) %>%
     filter( n > 1000) %>%
     ggplot(aes(x = Type, weight = n)) + geom_bar()
+
+
+## boxplots
+PC = read_csv("postcodes.csv")
+
+## join on postcodes
+huis %>%
+  left_join(
+    PC,
+    by = c("PC6" = "Postcode_spatie")
+  ) %>%
+  filter(prijs < 1000000, kamers < 10, Oppervlakte < 500) %>%
+  ggplot(aes(x = province_code, y = prijs)) +
+  geom_boxplot()
