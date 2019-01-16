@@ -23,7 +23,13 @@ plt.colorbar()
 plt.show()
 
 ## histograms
-plt.hist(huis.prijs, 20, density=1, facecolor='g', alpha=0.75)
+plt.hist(
+    huis.prijs, 
+    20, 
+    facecolor = 'g',
+    alpha = 0.75,
+    histtype='bar', ec='black'
+)
 plt.show()
 
 ## bar plots
