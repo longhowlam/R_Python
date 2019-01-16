@@ -14,17 +14,27 @@ type(x)
 
 x = 7
 y = 2
+
+
+
+# default operations work between integers and doubles
+9 + 9.
+7/3
+7/3.
 x/y
 
-12 % 7
+# integer division and modulo
 12 // 7
+12 % 7
 
 #### strings 
 x = "longhow"
 type(x)
 
-# strings can be added in python
+# strings can be 'added' in python
 "longhow" + "lam"
+
+"longhow" + 8
 
 # string objects posses methods
 x.upper()
@@ -143,3 +153,6 @@ df.col[2]
 df[['col', 'leeftijd']]
 
 df['temp'] = df['leeftijd'] * 12
+
+### overview van kolomen met wat statistieken
+df.describe()

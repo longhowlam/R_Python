@@ -2,7 +2,8 @@
 ##
 ##  Basic R code examples
  
- 
+   
+    
 ###### data types #########################################
  
 ### integer and double
@@ -11,12 +12,18 @@
 x = 9
 typeof(x)
  
-x <- 9L  
+x <- 9L
 typeof(x)
  
 x = 9
 typeof(x)
- 
+
+# default operations work between integers and doubles
+9 + 9.
+7/3
+7/3.
+x/y
+
 12 %% 7
 12 %/%  7
  
@@ -28,7 +35,7 @@ typeof(x)
 paste0("longhow", "lam")
  
 library(stringr)
-str_sub(x,3,6)
+str_sub(x, 3, 6)
 str_toupper(x)
  
 #### factor
@@ -37,7 +44,7 @@ s = c("F", "F", "F", "M", "M") %>% as.factor()
 ##### data structures ############################
  
 #### vectors
-x = c(1,2,3,4,5)
+x = c(1, 2, 3, 4, 5)
 x
 
 # indices in R beginnen bij 1
@@ -60,8 +67,8 @@ A[2,]
 A[,2:3]
 
 ## matrix vermenigvuldigen: twee mogelijkheden 
-A*A
-A%*%A
+A * A
+A %*% A
  
 #### list
 a = list(1,2,3,4, "P")
@@ -102,3 +109,7 @@ df$col[2]
 df[c("col", "leeftijd")]
 
 df$temp = df$leeftijd * 12
+
+
+### overview van kolomen met wat statistieken
+summary(df)

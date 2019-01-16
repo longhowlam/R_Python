@@ -1,24 +1,33 @@
-###############################################
+###############################################################################
 ##
 ## Some visualisation in R
 
-#### first some data
+#### first import some data
 library(tidyverse)
 huis = read_csv("huizen.csv")
 
-#### ggplot2
+######## ggplot2 ##############################################################
+
+# The grammar of graphics: ggplot2. Een plot wordt gemaakt door layers op elkaar te leggen,
+# elke laag kan worden beschreven met zogenaamde *aesthetics* (stijlen). Elke laag kan in een
+# variabele opgeslagen worden en deze kunnen bij elkaar 'opgeteld' worden tot een uiteindelijke plot. 
 
 ## scatterplot
 ggplot(huis, aes(x = Oppervlakte, y = prijs)) + geom_point()
 
-## kleur 
+## kleur, haal wat data weg voor estetische redenen
+## let op de overgang %>% naar +
 huis %>%
     filter(prijs < 1000000, kamers < 10, Oppervlakte < 500) %>%
     ggplot(aes(x = Oppervlakte, y = prijs, color = kamers)) +
     geom_point() + labs(title = "Oppervlakte vs Prijs met aantal kamers")
 
 ## histograms
-ggplot(huis, aes(prijs)) + geom_histogram(bins = 20)
+huis %>%
+    filter(prijs < 1000000, kamers < 10, Oppervlakte < 500) %>%
+    ggplot(aes(prijs)) +
+    geom_histogram(bins = 20) +
+    labs(x = "prijs in Euros")
 
 ## bar plots
 huis %>%
@@ -40,3 +49,16 @@ huis %>%
   filter(prijs < 1000000, kamers < 10, Oppervlakte < 500) %>%
   ggplot(aes(x = province_code, y = prijs)) +
   geom_boxplot()
+
+## werkt niet in VSC maar in RStudio komt de plot in een interactive viewer
+
+library(plotly)
+plot_ly(z = ~volcano)
+plot_ly(z = ~volcano) %>% add_surface()
+
+mtcars = mtcars
+mtcars$naampjes = row.names(mtcars)
+
+plot_ly(data = mtcars, x=~mpg, y = ~wt)
+plot_ly(data = mtcars, x=~mpg, y = ~wt, color = ~cyl)
+plot_ly(data = mtcars, x=~mpg, y = ~wt, text = ~naampjes)
