@@ -5,7 +5,7 @@
 ### huizen data
 
 import pandas as pd
-
+import numpy as np
 ## import data sets
 huis = pd.read_csv("huizen.csv")
 PC = pd.read_csv("postcodes.csv")
@@ -87,6 +87,12 @@ y = huis3.prijs
 X = pd.get_dummies(X, columns=["province_code"])
 outlm = lr.fit(X,y)
 
+cdf = pd.DataFrame(outlm.coef_, X.columns, columns=['Coefficients'])
+print(cdf)
+
+#### som van de eerste 11 prov parameters is de negatieve 12e parameter
+np.sum(outlm.coef_[2:13])
+outlm.coef_[13]
 ## het blijkt dat we de zogenaamde sum contrast in R hebben.
 
 

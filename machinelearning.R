@@ -39,6 +39,10 @@ outlm = lm(
 )
 summary(outlm)
 
+# De laatste coefficient is weggelaten, maar deze is de negatieve som van de overige
+# exclusief intercept, kamers en oppervlakte
+sum(coef(outlm)[c(-1,-2,-3)])
+
 # nu kan je de paramters interpreteren als verschillen van het totale gemiddelde
 
 

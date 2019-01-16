@@ -65,6 +65,14 @@ np.sin(x)
 
 x[2] = 9
 
+# ranges van een arrary selecteren
+x = np.arange(10)
+x[5:7]
+
+# boolean indexing
+x = np.random.uniform(0,1,1000)
+x[ x>0.9 ]
+
 #### immutable tuples in python
 x= (1,2,3,4,5)
 x[2] = 9

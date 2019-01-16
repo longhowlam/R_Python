@@ -54,6 +54,14 @@ x[1]
 x + 2*x
 sin(x)
 
+# ranges van een vector selecteren
+x = 0:10
+x[6:7]
+
+# boolean indexing
+x = runif(1000)
+x [ x > 0.9 ]
+
 
 #### matrix
 A = rbind(c(1,2,3), c(4,5,6), c(7,8,9))
