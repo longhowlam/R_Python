@@ -1,0 +1,17 @@
+{
+   "name": "vector_assembler_61df6b5e-1fd6-11e9-b76d-fdfa60b1f426",
+   "shape": {
+      "inputs": [
+         {
+            "name": "unscaled_cont_features",
+            "port": "input0"
+         }
+      ],
+      "outputs": [
+         {
+            "name": "input_features",
+            "port": "output"
+         }
+      ]
+   }
+}

@@ -1,0 +1,22 @@
+{
+   "op": "vector_assembler",
+   "attributes": {
+      "input_shapes": {
+         "type": "list",
+         "data_shape": [
+            {
+               "base": "tensor",
+               "isNullable": false,
+               "tensorShape": {
+                  "dimensions": [
+                     {
+                        "size": 2,
+                        "name": ""
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}
