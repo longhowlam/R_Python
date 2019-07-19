@@ -4,6 +4,7 @@
 
 ### first import some data
 import pandas as pd
+huis = pd.read_csv("~/PythonProjects/R_Python/huizen.csv")
 huis = pd.read_csv("huizen.csv")
 
 ##################### matplotlib ###########################################

@@ -11,8 +11,8 @@
 # gewone python code
 import pandas as pd
 
-huis = pd.read_csv("huizen.csv")
-PC = pd.read_csv("postcodes.csv")
+huis = pd.read_csv("~/PythonProjects/R_Python/huizen.csv")
+PC = pd.read_csv("~/PythonProjects/R_Python/postcodes.csv")
 
 ## join on postcodes
 huis2 = huis.merge(
