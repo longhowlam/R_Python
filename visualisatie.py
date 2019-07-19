@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 plt.scatter(huis.Oppervlakte, huis.prijs)
 plt.show()
 
+
 ## kleur, filter wat outliers weg die de plot anders kapot maken
 huis = huis.query('prijs < 1000000 & kamers < 10 & Oppervlakte < 500')
 plt.scatter( huis.Oppervlakte, huis.prijs, c = huis.kamers )
