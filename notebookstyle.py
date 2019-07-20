@@ -11,8 +11,8 @@
 # gewone python code
 import pandas as pd
 
-huis = pd.read_csv("~/PythonProjects/R_Python/huizen.csv")
-PC = pd.read_csv("~/PythonProjects/R_Python/postcodes.csv")
+huis = pd.read_csv("/home/jupyter/huizen.csv")
+PC = pd.read_csv("/home/jupyter/postcodes.csv")
 
 ## join on postcodes
 huis2 = huis.merge(
@@ -31,6 +31,11 @@ Prov
 #%% [markdown]
 
 # Ook plaatjes kunnen worden gemaakt
+
+#%%
+import seaborn as sns 
+tmp = huis2.query('prijs < 1500000')
+sns.distplot( tmp.prijs , kde=False)
 
 #%% [markdown]
 # 3D wiskundig plaatje

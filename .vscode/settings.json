@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "/home/longhowlam/anaconda3/envs/my_py36/bin/python",
-    "python.dataScience.jupyterServerURI": "http://localhost:8888/?token=5a0d8b02cb4ff609f249f2b8f44cd46049a7c56cb60149bd"
+    "python.dataScience.jupyterServerURI": "http://35.197.26.112:8888/?token=3c54c5c3533eb64642ab4fa0b3f5a307f1445cff1d6a47b3"
 }
