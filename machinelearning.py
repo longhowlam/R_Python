@@ -6,6 +6,7 @@
 
 import pandas as pd
 import numpy as np
+
 ## import data sets
 huis = pd.read_csv("huizen.csv")
 PC = pd.read_csv("postcodes.csv")

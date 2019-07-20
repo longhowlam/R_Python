@@ -1,5 +1,5 @@
 # enkele plaatjes
-
+#%%
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
@@ -23,3 +23,6 @@ for ax, s in zip(axes.flat, np.linspace(0, 3, 10)):
 f.tight_layout()
 
 plt.show()
+
+
+#%%
